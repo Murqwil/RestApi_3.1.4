@@ -19,7 +19,7 @@ async function loadUserInfo() {
                 <td>${user.name}</td>
                 <td>${user.lastName}</td>
                 <td>${user.age}</td>
-                <td>${user.email}</td>
+                <td>${user.username}</td>
                 <td>${roles}</td>
             </tr>
         `;

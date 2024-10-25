@@ -17,7 +17,7 @@ function loadUsersTable() {
                 <th>ID</th>
                 <th>Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
+                <th>username</th>
                 <th>Age</th>
                 <th>Roles</th>
                 <th>Actions</th>
@@ -33,7 +33,7 @@ function loadUsersTable() {
                     <td>${user.id}</td>
                     <td>${user.name}</td>
                     <td>${user.lastName}</td>
-                    <td>${user.email}</td>
+                    <td>${user.username}</td>
                     <td>${user.age}</td>
                     <td>${role}</td>
                     <td>
@@ -67,7 +67,7 @@ function addUser() {
     const newUser = {
         name: document.getElementById('addUserFirstName').value.trim(),
         lastName: document.getElementById('addUserLastName').value.trim(),
-        email: document.getElementById('addUserEmail').value.trim(),
+        username: document.getElementById('addUserusername').value.trim(),
         age: document.getElementById('addUserAge').value.trim(),
         password: document.getElementById('addUserPassword').value.trim(),
         role: document.getElementById('addUserRole').value.trim() === 'ADMIN' ? 'ROLE_ADMIN' : 'ROLE_USER'
@@ -98,7 +98,7 @@ function openEditModal(userId) {
             document.getElementById('userId').value = user.id;
             document.getElementById('userName').value = user.name;
             document.getElementById('userLastName').value = user.lastName;
-            document.getElementById('userEmail').value = user.email;
+            document.getElementById('userusername').value = user.username;
             document.getElementById('userAge').value = user.age;
             document.getElementById('userRole').value = user.role === 'ROLE_ADMIN' ? 'ADMIN' : 'USER';
 
@@ -114,7 +114,7 @@ async function updateUser(userId) {
     const updatedData = {
         name: document.getElementById('userName').value.trim(),
         lastName: document.getElementById('userLastName').value.trim(),
-        email: document.getElementById('userEmail').value.trim(),
+        username: document.getElementById('userusername').value.trim(),
         age: document.getElementById('userAge').value.trim(),
         role: document.getElementById('userRole').value.trim() === 'ADMIN' ? 'ROLE_ADMIN' : 'ROLE_USER'
     };
@@ -157,7 +157,7 @@ function openDeleteModal(userId) {
         })
         .then(user => {
             document.getElementById('deleteUserId').value = user.id;
-            document.getElementById('deleteUserEmail').value = user.email;
+            document.getElementById('deleteUserusername').value = user.username;
             document.getElementById('deleteUserName').value = user.name;
             document.getElementById('deleteUserLastName').value = user.lastName;
             document.getElementById('deleteUserAge').value = user.age;

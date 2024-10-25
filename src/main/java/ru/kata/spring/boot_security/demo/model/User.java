@@ -26,8 +26,8 @@ public class User implements UserDetails {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "password")
     private String password;
@@ -80,7 +80,7 @@ public class User implements UserDetails {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
                 ", role='" + role + '\'' +
@@ -97,7 +97,7 @@ public class User implements UserDetails {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
-        this.email = email;
+        this.username = username;
         this.password = password;
         this.age = age;
         this.role = role;
@@ -110,7 +110,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.email;
+        return this.username;
     }
 
     @Override
@@ -157,12 +157,12 @@ public class User implements UserDetails {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.username = email;
     }
 
     public void setPassword(String password) {

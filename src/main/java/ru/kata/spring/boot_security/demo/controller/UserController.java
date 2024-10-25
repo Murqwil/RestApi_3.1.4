@@ -20,7 +20,7 @@ public class UserController {
 
     @GetMapping("/info")
     public User getUserInfo() {
-        return userService.findByEmail("user");
+        return userService.findByUsername("user");
     }
 
     @GetMapping("/user")

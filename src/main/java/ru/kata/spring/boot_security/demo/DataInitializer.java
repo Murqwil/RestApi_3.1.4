@@ -41,7 +41,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
         User user = new User();
-        user.setEmail("user");
+        user.setUsername("user");
         user.setAge(29);
         user.setPassword(passwordEncoder.encode("user"));
         user.setName("Rinat");
@@ -57,7 +57,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
         User admin = new User();
-        admin.setEmail("admin");
+        admin.setUsername("admin");
         admin.setAge(25);
         admin.setPassword(passwordEncoder.encode("admin"));
         admin.setName("Timur");

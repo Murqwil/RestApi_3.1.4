@@ -9,7 +9,7 @@ public interface UserService {
     User getById(Integer id);
     void save(User user);
     void deleteById(Integer id);
-    User findByEmail(String username);
+    User findByUsername(String username);
     void update(User user);
     User passwordCoder(User user);
 }

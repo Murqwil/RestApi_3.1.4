@@ -41,7 +41,7 @@ public class AdminApiController {
 
     @GetMapping("/user")
     public User getUserByUsername(Principal principal) {
-        return userService.findByEmail(principal.getName());
+        return userService.findByUsername(principal.getName());
     }
 
     @PutMapping("/users/{id}")
